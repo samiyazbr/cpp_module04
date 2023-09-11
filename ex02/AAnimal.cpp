@@ -1,27 +1,27 @@
 #include "AAnimal.hpp"
 
-Animal::Animal() : Type("Animal")
+AAnimal::AAnimal() : Type("Animal")
 {
     std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string type) : Type(type)
+AAnimal::AAnimal(std::string type) : Type(type)
 {
     std::cout << "Animal name constructor called" << std::endl;
 }
 
-Animal::Animal(Animal const &copy)
+AAnimal::AAnimal(AAnimal const &copy)
 {
     std::cout << "Animal copy constructor called" << std::endl;
     *this = copy;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
     std::cout << "Animal destructor called" << std::endl;
 }
 
-Animal &Animal::operator=(Animal const &rhs)
+AAnimal &AAnimal::operator=(AAnimal const &rhs)
 {
     std::cout << "Animal assignment operator called" << std::endl;
     if (this != &rhs)
@@ -29,12 +29,12 @@ Animal &Animal::operator=(Animal const &rhs)
     return (*this);
 }
 
-std::string Animal::get_Type() const
+std::string AAnimal::get_Type() const
 {
     return (this->Type);
 }
 
-void Animal::makeSound() const
+void AAnimal::makeSound() const
 {
     std::cout << "Animal sound" << std::endl;
 }

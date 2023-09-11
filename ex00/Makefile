@@ -12,7 +12,7 @@ OBJ = $(SRC:%.cpp=%.o)
 all		: $(NAME)
 
 $(NAME)	: $(OBJ)
-		$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+		$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean	:
 	rm -rf $(OBJ)
